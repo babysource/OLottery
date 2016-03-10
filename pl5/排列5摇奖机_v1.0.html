@@ -1,0 +1,107 @@
+<!--制作人：Wythe-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<script language="javascript" type="text/javascript" src="../script/main.js"></script>
+		<title>排列5摇奖机 v1.0</title>
+	</head>
+	<body style="background-color:#333333;">
+		<br/><br/><br/><br/><br/>
+		<table border="1" cellspacing="0" cellpadding="0" style="background-color:#ffffff;border-color:#eeeeee;" width="70%" align="center">
+			<tr>
+				<td width="100%" height="58" align="center" valign="middle" style="font-size:15px;font-family:宋体">排列5摇奖机 v1.0</td>
+			</tr>
+			<tr>
+				<td height="51" colspan="2" align="center">
+					<input type="button" name="button" value="时来运转" onClick="winSys();" />
+				</td>
+			</tr>
+		</table>
+		<table border="0" cellspacing="0" cellpadding="0" style="background-color:#ffffff;" width="70%" align="center">
+			<tr>
+			  <td id="baby_Dear" height="30px" style="visibility:hidden;font-size:15px;font-family:宋体">　仙师指路：您可以用这组号码碰碰运气！</td>
+			</tr>
+			<tr>
+			<td id="baby_LuckNum" height="50px" width="33%" align="center" style="font-size:15px;font-family:宋体"></td>
+			</tr>
+		</table>
+	</body>
+</html>
+<script language="javascript">
+<!--
+function winSys(){
+	 	//－－－－第一位属性－－－－
+    var baby_OneBallArray = [];
+    var baby_OneTotalBall = 10;
+    var baby_OneSelectBall = 1;
+    var baby_OneTempArray = null;
+    //－－－－－－－－－－－－
+
+    for(var i=1; i<=baby_OneSelectBall; i++){
+        baby_OneTempArray = initSysBall(baby_OneTotalBall,baby_OneBallArray);
+        baby_OneBallArray.push(baby_OneTempArray[Math.floor(Math.random()*baby_OneTempArray.length)]);
+    }
+
+		var baby_OneStr = baby_OneBallArray[0] - 1;
+
+    //－－－－第二位属性－－－－
+    var baby_TwoBallArray = [];
+    var baby_TwoTotalBall = 10;
+    var baby_TwoSelectBall = 1;
+    var baby_TwoTempArray = null;
+    //－－－－－－－－－－－－
+
+    for(var i=1; i<=baby_TwoSelectBall; i++){
+        baby_TwoTempArray = initSysBall(baby_TwoTotalBall,baby_TwoBallArray);
+        baby_TwoBallArray.push(baby_TwoTempArray[Math.floor(Math.random()*baby_TwoTempArray.length)]);
+    }
+
+    var baby_TwoStr = baby_TwoBallArray[0] - 1;
+
+    //－－－－第三位属性－－－－
+    var baby_ThreeBallArray = [];
+    var baby_ThreeTotalBall = 10;
+    var baby_ThreeSelectBall = 1;
+    var baby_ThreeTempArray = null;
+    //－－－－－－－－－－－－
+
+    for(var i=1; i<=baby_ThreeSelectBall; i++){
+        baby_ThreeTempArray = initSysBall(baby_ThreeTotalBall,baby_ThreeBallArray);
+        baby_ThreeBallArray.push(baby_ThreeTempArray[Math.floor(Math.random()*baby_ThreeTempArray.length)]);
+    }
+
+    var baby_ThreeStr = baby_ThreeBallArray[0] - 1;
+
+    //－－－－第四位属性－－－－
+    var baby_FourBallArray = [];
+    var baby_FourTotalBall = 10;
+    var baby_FourSelectBall = 1;
+    var baby_FourTempArray = null;
+    //－－－－－－－－－－－－
+
+    for(var i=1; i<=baby_FourSelectBall; i++){
+        baby_FourTempArray = initSysBall(baby_FourTotalBall,baby_FourBallArray);
+        baby_FourBallArray.push(baby_FourTempArray[Math.floor(Math.random()*baby_FourTempArray.length)]);
+    }
+
+    var baby_FourStr = baby_FourBallArray[0] - 1;
+
+    //－－－－第五位属性－－－－
+    var baby_FiveBallArray = [];
+    var baby_FiveTotalBall = 10;
+    var baby_FiveSelectBall = 1;
+    var baby_FiveTempArray = null;
+    //－－－－－－－－－－－－
+
+    for(var i=1; i<=baby_FiveSelectBall; i++){
+        baby_FiveTempArray = initSysBall(baby_FiveTotalBall,baby_FiveBallArray);
+        baby_FiveBallArray.push(baby_FiveTempArray[Math.floor(Math.random()*baby_FiveTempArray.length)]);
+    }
+
+    var baby_FiveStr = baby_FiveBallArray[0] - 1;
+
+    document.getElementById("baby_Dear").style.visibility = "visible";
+    document.getElementById("baby_LuckNum").innerHTML = "第一位：" + baby_OneStr + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二位：" + baby_TwoStr + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三位：" + baby_ThreeStr + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第四位：" + baby_FourStr + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第五位：" + baby_FiveStr;
+}
+//-->
+</script>

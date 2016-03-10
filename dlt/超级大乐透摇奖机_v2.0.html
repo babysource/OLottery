@@ -1,0 +1,65 @@
+<!--制作人：Wythe-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<script language="javascript" type="text/javascript" src="../script/main.js"></script>
+		<title>超级大乐透摇奖机 v2.0</title>
+	</head>
+	<body style="background-color:#333333;">
+		<br/><br/><br/><br/><br/>
+		<table border="1" cellspacing="0" cellpadding="0" style="background-color:#ffffff;border-color:#eeeeee;" width="60%" align="center">
+			<tr>
+				<td width="100%" height="58" align="center" valign="middle" style="font-size:15px;font-family:宋体">超级大乐透摇奖机 v2.0</td>
+			</tr>
+			<tr>
+				<td height="51" colspan="2" align="center">
+					<input type="button" name="button" value="时来运转" onClick="winSys();" />
+				</td>
+			</tr>
+		</table>
+		<table border="0" cellspacing="0" cellpadding="0" style="background-color:#ffffff;" width="60%" align="center">
+			<tr>
+			  <td id="baby_Dear" height="30px" style="visibility:hidden;font-size:15px;font-family:宋体">　仙师指路：您可以用这组号码碰碰运气！</td>
+			</tr>
+			<tr>
+			<td id="baby_LuckNum" height="50px" width="33%" align="center" style="font-size:15px;font-family:宋体"></td>
+			</tr>
+		</table>
+	</body>
+</html>
+<script language="javascript">
+<!--
+function winSys(){
+    //－－－－前区属性－－－－
+    var baby_FrontBallArray = [];
+    var baby_FrontTotalBall = 35;
+    var baby_FrontSelectBall = 5;
+    var baby_FrontTempArray = null;
+    //－－－－－－－－－－－－
+
+    for(var i=1; i<=baby_FrontSelectBall; i++){
+        baby_FrontTempArray = initSysBall(baby_FrontTotalBall,baby_FrontBallArray);
+        baby_FrontBallArray.push(baby_FrontTempArray[Math.floor(Math.random()*baby_FrontTempArray.length)]);
+    }
+
+		var baby_FrontStr = sortBall(baby_FrontBallArray).join(" , ");
+
+    //－－－－后区属性－－－－
+    var baby_BackBallArray = [];
+    var baby_BackTotalBall = 12;
+    var baby_BackSelectBall = 2;
+    var baby_BackTempArray = null;
+    //－－－－－－－－－－－－
+
+    for(var i=1; i<=baby_BackSelectBall; i++){
+        baby_BackTempArray = initSysBall(baby_BackTotalBall,baby_BackBallArray);
+        baby_BackBallArray.push(baby_BackTempArray[Math.floor(Math.random()*baby_BackTempArray.length)]);
+    }
+
+    var baby_BackStr = sortBall(baby_BackBallArray).join(" , ");
+
+    document.getElementById("baby_Dear").style.visibility = "visible";
+    document.getElementById("baby_LuckNum").innerHTML = "前区号码：" + baby_FrontStr + "&nbsp;&nbsp;&nbsp;后区号码：" + baby_BackStr;
+}
+//-->
+</script>

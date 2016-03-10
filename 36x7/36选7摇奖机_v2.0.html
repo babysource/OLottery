@@ -1,0 +1,51 @@
+<!--制作人：Wythe-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<script language="javascript" type="text/javascript" src="../script/main.js"></script>
+		<title>36选7摇奖机 vv2.0</title>
+	</head>
+	<body style="background-color:#333333;">
+		<br/><br/><br/><br/><br/>
+		<table border="1" cellspacing="0" cellpadding="0" style="background-color:#ffffff;border-color:#eeeeee;" width="60%" align="center">
+			<tr>
+				<td width="100%" height="58" align="center" valign="middle" style="font-size:15px;font-family:宋体">36选7摇奖机 v2.0</td>
+			</tr>
+			<tr>
+				<td height="51" colspan="2" align="center">
+					<input type="button" name="button" value="时来运转" onClick="winSys();" />
+				</td>
+			</tr>
+		</table>
+		<table border="0" cellspacing="0" cellpadding="0" style="background-color:#ffffff;" width="60%" align="center">
+			<tr>
+			  <td id="baby_Dear" height="30px" style="visibility:hidden;font-size:15px;font-family:宋体">　仙师指路：您可以用这组号码碰碰运气！</td>
+			</tr>
+			<tr>
+			<td id="baby_LuckNum" height="50px" width="33%" align="center" style="font-size:15px;font-family:宋体"></td>
+			</tr>
+		</table>
+	</body>
+</html>
+<script language="javascript">
+<!--
+function winSys(){
+		//－－－－初始化属性－－－－
+		var baby_BallArray = [];
+		var baby_TotalBall = 36;
+		var baby_SelectBall= 7;
+		var baby_TempArray = null;
+    //－－－－－－－－－－－－
+
+    for(var i=1; i<=baby_SelectBall; i++){
+        baby_TempArray = initSysBall(baby_TotalBall,baby_BallArray);
+        baby_BallArray.push(baby_TempArray[Math.floor(Math.random()*baby_TempArray.length)]);
+    }
+
+		var baby_Str = sortBall(baby_BallArray).join(" , ");
+
+    document.getElementById("baby_Dear").style.visibility = "visible";
+    document.getElementById("baby_LuckNum").innerHTML = baby_Str;
+}
+//-->
+</script>
