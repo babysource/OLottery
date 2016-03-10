@@ -1,0 +1,2 @@
+# OLottery
+Random lottery generator
