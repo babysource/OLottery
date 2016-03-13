@@ -1,0 +1,60 @@
+@import url('base.css');
+
+body {
+  background-color: #333333;
+}
+
+body table {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+body table.item_ctrl {
+  margin-top: 88px;
+  border: 1px #eeeeee solid;
+}
+
+body table.item_ctrl tr.line_name {
+  height: 60px;
+}
+
+body table.item_ctrl tr.line_ctrl {
+  height: 55px;
+}
+
+body table.item_luck tr.line_dear {
+  height: 55px;
+}
+
+body table.item_luck tr.line_luck {
+  height: 35px;
+}
+
+body table.item_ctrl tr.line_name td {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+body table.item_luck tr.line_dear td {
+  font-size: 16px;
+  text-align: left;
+  visibility: hidden;
+  font-weight: bolder;
+  vertical-align: middle;
+}
+
+body table.item_luck tr.line_luck td {
+  font-size: 16px;
+  vertical-align: top;
+}
+
+body table.item_ctrl tr.line_ctrl input {
+  color: #ff0000;
+  width: 120px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: bolder;
+  background-color: #ffff00;
+}
